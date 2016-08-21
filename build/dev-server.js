@@ -32,7 +32,7 @@ app.use(require('webpack-hot-middleware')(compiler, {
   path: '/__webpack_hmr'
 }))
 
-// app.use('/static', express.static('./src/assets'))
+app.use('/dist', express.static('./dist'))
 
 app.listen(port, host, function (err) {
   if (err) {
