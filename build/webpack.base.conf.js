@@ -8,8 +8,11 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: path.resolve(__dirname, '../dist'),
+    publicPath: './',
     filename: '[name].js'
+  },
+  resolve: {
+    extensions: ['', '.js', '.css', '.less']
   },
   module: {
     loaders: [
@@ -17,6 +20,14 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
+        test: /\.less/,
+        loader: 'style!css!less'
       }
     ]
   }
