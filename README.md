@@ -17,14 +17,24 @@ npm run build
 
 # why use
 ## loader?
-loader的加载顺序是从上往上，从右到左
+loader的加载顺序是从下往上，从右到左  
 
-  style!css
+``` json
+{
+  test: /\.css/,
+  loader: 'style!css'
+}
+```
 
 + css-loader css预处理器
 + style-loader css加载器
 
-  style!css!less
+``` json
+{
+  test: /\.less/,
+  loader: 'style!css!less'
+}
+```
 
 + less less编译器
 + less-loader less加载器
@@ -34,6 +44,6 @@ loader的加载顺序是从上往上，从右到左
 + html-webpack-plugin 通过一个模版生成一个html（依赖output.publicPath)
 + webpack.optimize.UglifyJsPlugin 压缩js
 
-## License
+# License
 
 MIT

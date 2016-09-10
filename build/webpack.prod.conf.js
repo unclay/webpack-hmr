@@ -16,6 +16,4 @@ config.plugins = (config.plugin || []).concat([
   })
 ])
 
-console.log(config.plugin)
-
 module.exports = config

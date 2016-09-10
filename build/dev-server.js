@@ -11,7 +11,7 @@ var compiler = webpack(config)
 
 var argv = require('yargs').argv
 
-var host = argv.host || '127.0.0.1'
+var host = argv.host || '0.0.0.0'
 var port = argv.port || 8080
 
 // handle fallback for HTML5 history API
